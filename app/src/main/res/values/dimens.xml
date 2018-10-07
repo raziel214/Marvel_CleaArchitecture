@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cardviewlayout_height">200dp</dimen>
+    <dimen name="cornerradius_cardview">28dp</dimen>
+    <dimen name="layout_height_cardview">200dp</dimen>
+</resources>
