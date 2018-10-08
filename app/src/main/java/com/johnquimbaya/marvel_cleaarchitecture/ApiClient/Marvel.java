@@ -1,9 +1,14 @@
 package com.johnquimbaya.marvel_cleaarchitecture.ApiClient;
 
-import com.johnquimbaya.marvel_cleaarchitecture.Home.Model.ResultsItem;
+import com.johnquimbaya.marvel_cleaarchitecture.Home.Model.Basic;
+import com.johnquimbaya.marvel_cleaarchitecture.Home.Model.Data;
+import com.johnquimbaya.marvel_cleaarchitecture.Home.Model.SuperHero;
+
+import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Path;
 
 public interface Marvel {
 
@@ -20,7 +25,8 @@ public interface Marvel {
 
 
     @GET("v1/public/series/{seriesID}/characters?")
-    Call<ResultsItem>getDataComic();
+    Call<Basic<Data<ArrayList<SuperHero>>>> getHeroes(@Path("seriesID") int seriesId);
+
 
 
 }

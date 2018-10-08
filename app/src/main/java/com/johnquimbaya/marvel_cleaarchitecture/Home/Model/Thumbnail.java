@@ -1,39 +1,28 @@
 package com.johnquimbaya.marvel_cleaarchitecture.Home.Model;
 
+public class Thumbnail {
 
-import com.google.gson.annotations.SerializedName;
+    private String path;
+    private String extension;
 
+    public String getPath() {
+        return path;
+    }
 
-public class Thumbnail{
+    public void setPath(String path) {
+        this.path = path;
+    }
 
-	@SerializedName("path")
-	private String path;
+    public String getExtension() {
+        return extension;
+    }
 
-	@SerializedName("extension")
-	private String extension;
+    public void setExtension(String extension) {
+        this.extension = extension;
+    }
 
-	public void setPath(String path){
-		this.path = path;
-	}
+    public String getFullPathUrl(){
+        return path+"."+extension;
+    }
 
-	public String getPath(){
-		return path;
-	}
-
-	public void setExtension(String extension){
-		this.extension = extension;
-	}
-
-	public String getExtension(){
-		return extension;
-	}
-
-	@Override
- 	public String toString(){
-		return 
-			"Thumbnail{" + 
-			"path = '" + path + '\'' + 
-			",extension = '" + extension + '\'' + 
-			"}";
-		}
 }
